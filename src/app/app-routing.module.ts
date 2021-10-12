@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'testgraph',
+    loadChildren: () => import('./testgraph/testgraph.module').then( m => m.TestgraphPageModule)
+  },
+  {
+    path: 'finnhub',
+    loadChildren: () => import('./finnhub/finnhub.module').then( m => m.FinnhubPageModule)
+  },
+  {
+    path: 'polygon',
+    loadChildren: () => import('./polygon/polygon.module').then( m => m.PolygonPageModule)
+  },
+  {
+    path: 'updatechart',
+    loadChildren: () => import('./updatechart/updatechart.module').then( m => m.UpdatechartPageModule)
+  },
 ];
 
 @NgModule({
